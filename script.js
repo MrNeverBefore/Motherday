@@ -11,7 +11,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "05/01/",
+        dayMonth = "04/30/",
         birthday = dayMonth + yyyy;
     
     today = mm + "/" + dd + "/" + yyyy;
@@ -33,7 +33,13 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
+            document.getElementById("headline").innerText = "Surprise!!";
+            document.getElementById("headline").innerText = "Many things are waiting for you";
+            document.getElementById("headline").innerText = "Lets the Journey Begains";
+            setTimeout(function() {
+              window.location.href = "/happy-birthday-sneha/dist/index.html";
+            }, 10000);
+            
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
